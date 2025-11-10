@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+}
+
+.overlay {
+    display:grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+
+    aspect-ratio: 16/9;
+    /* width: 1920px;
+    height: 1080px; */
+    /* background-color: hsla(315, 36%, 42%, 0.5); */
+}
+
+.stream {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    height: 90fr;
+    background: transparent;
+    border: 4px solid black;
+}
+
+.frameRight {
+    grid-column: -1;
+    grid-row: 1 / -1;
+    background: hsla(315, 30, 50, 1);
+    overflow: auto;
+}
+
+.frameBottom {
+    grid-row: -1;
+    grid-column: 1 / end;
+    background: hsla(315, 30, 50, 1);
+}
+
+.chat {
+    border: 4px solid black;
+    margin: 4%;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+    /* border-radius: 50%; */
+}
